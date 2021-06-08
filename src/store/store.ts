@@ -2,10 +2,10 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { swApi } from "services/swApi";
 
-import { rootReducer } from "./reducer";
-
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    [swApi.reducerPath]: swApi.reducer,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(swApi.middleware),
 });
