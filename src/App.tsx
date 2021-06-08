@@ -1,15 +1,10 @@
-import { Layout } from "antd";
+import React from "react";
+import FrontPage from "Components/Pages";
 
 import "./App.scss";
 
 function App() {
-  const { Content } = Layout;
-
-  return (
-    <Layout style={{ height: "100vh" }}>
-      <Content>Content</Content>
-    </Layout>
-  );
+  return <FrontPage />;
 }
 
 export default App;
