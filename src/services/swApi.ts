@@ -16,4 +16,4 @@ export const swApi = createApi({
   }),
 });
 
-export const { useGetPeopleQuery, useGetFilmQuery } = swApi;
+export const { useGetPeopleQuery, useLazyGetFilmQuery } = swApi;

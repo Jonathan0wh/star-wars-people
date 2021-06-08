@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useAppDispatch } from "hooks/react-redux";
 import { Col, Row, Table, Typography } from "antd";
 import { useGetPeopleQuery } from "services/swApi";
+
+import { updatePersonDetail } from "../PersonDetail";
 
 import styles from "./PeopleTable.module.scss";
 
@@ -11,6 +14,8 @@ function PeopleTable() {
   const [page, setPage] = useState(1);
 
   const { isFetching, isSuccess, data } = useGetPeopleQuery(page);
+
+  const dispatch = useAppDispatch();
 
   return (
     <Row>
@@ -23,9 +28,23 @@ function PeopleTable() {
             title={() => <Title level={4}>Star Wars People</Title>}
             bordered
             onRow={(record) => ({
-              onClick: () => {
-                console.log(record);
-              },
+              onClick: () =>
+                dispatch(
+                  updatePersonDetail({
+                    name: record.name,
+                    birthYear: record.birth_year,
+                    gender: record.gender,
+                    filmIDs: record.films.map((filmUrl) => {
+                      if (typeof filmUrl === "string") {
+                        return filmUrl
+                          .replace("http://swapi.dev/api/films/", "")
+                          .replace("/", "");
+                      } else {
+                        return "";
+                      }
+                    }),
+                  })
+                ),
             })}
             onChange={(pagination) => setPage(pagination.current || 1)}
             pagination={{

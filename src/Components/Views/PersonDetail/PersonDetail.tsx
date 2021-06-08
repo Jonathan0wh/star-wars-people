@@ -1,3 +1,4 @@
+import { useAppSelector } from "hooks/react-redux";
 import { Col, Row, Typography } from "antd";
 
 import styles from "./PersonDetail.module.scss";
@@ -5,7 +6,11 @@ import styles from "./PersonDetail.module.scss";
 function PersonDetail() {
   const { Title, Text } = Typography;
 
-  return (
+  const { name, birthYear, gender, filmIDs } = useAppSelector(
+    (state) => state.personDetail
+  );
+
+  return !!name ? (
     <Row>
       <Col className={styles.column_container}>
         <Row>
@@ -15,24 +20,30 @@ function PersonDetail() {
         </Row>
 
         <Row>
-          <Col flex={1}>
-            <Text strong>Name:</Text>
+          <Col>
+            <Text strong>Name:&nbsp;</Text>
           </Col>
-          <Col flex={2}></Col>
+          <Col>
+            <Text>{name}</Text>
+          </Col>
         </Row>
 
         <Row>
-          <Col flex={1}>
-            <Text strong>Birth year:</Text>
+          <Col>
+            <Text strong>Birth year:&nbsp;</Text>
           </Col>
-          <Col flex={2}></Col>
+          <Col>
+            <Text>{birthYear}</Text>
+          </Col>
         </Row>
 
         <Row>
-          <Col flex={1}>
-            <Text strong>Gender:</Text>
+          <Col>
+            <Text strong>Gender:&nbsp;</Text>
           </Col>
-          <Col flex={2}></Col>
+          <Col>
+            <Text>{gender}</Text>
+          </Col>
         </Row>
 
         <Row>
@@ -42,7 +53,7 @@ function PersonDetail() {
         </Row>
       </Col>
     </Row>
-  );
+  ) : null;
 }
 
 export default PersonDetail;
