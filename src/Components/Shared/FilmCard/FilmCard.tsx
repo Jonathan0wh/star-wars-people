@@ -1,4 +1,4 @@
-import { Card, Col, Typography } from "antd";
+import { Card, Col, Skeleton, Space, Typography } from "antd";
 import { useGetFilmQuery } from "services/swApi";
 
 import styles from "./FilmCard.module.scss";
@@ -10,13 +10,21 @@ interface FilmCardProps {
 function FilmCard({ id }: FilmCardProps) {
   const { Text } = Typography;
 
-  const { isSuccess, data } = useGetFilmQuery(id);
+  const { isLoading, isFetching, isSuccess, data } = useGetFilmQuery(id);
 
   return isSuccess && data ? (
     <Col span={8}>
-      <Card title={data.title} className={styles.card_container}>
-        <Text>{data.opening_crawl}</Text>
-      </Card>
+      <Space>
+        <Card
+          title={data.title}
+          loading={isFetching}
+          className={styles.card_container}
+        >
+          <Skeleton loading={isLoading} />
+
+          <Text>{data.opening_crawl}</Text>
+        </Card>
+      </Space>
     </Col>
   ) : null;
 }

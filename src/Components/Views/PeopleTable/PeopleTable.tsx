@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppDispatch } from "hooks/react-redux";
-import { Col, Row, Table, Typography } from "antd";
+import { Col, Row, Skeleton, Table, Typography } from "antd";
 import { useGetPeopleQuery } from "services/swApi";
 
 import { updatePersonDetail } from "../PersonDetail";
@@ -13,13 +13,15 @@ function PeopleTable() {
 
   const [page, setPage] = useState(1);
 
-  const { isFetching, isSuccess, data } = useGetPeopleQuery(page);
+  const { isLoading, isFetching, isSuccess, data } = useGetPeopleQuery(page);
 
   const dispatch = useAppDispatch();
 
   return (
     <Row justify="center">
       <Col className={styles.column_container}>
+        <Skeleton paragraph={{ rows: 11 }} loading={isLoading} />
+
         {isSuccess && data && (
           <Table
             dataSource={data.results}
@@ -46,7 +48,17 @@ function PeopleTable() {
                   })
                 ),
             })}
-            onChange={(pagination) => setPage(pagination.current || 1)}
+            onChange={(pagination) => {
+              dispatch(
+                updatePersonDetail({
+                  name: "",
+                  birthYear: "",
+                  gender: "",
+                  filmIDs: [],
+                })
+              );
+              setPage(pagination.current || 1);
+            }}
             pagination={{
               current: page,
               total: data.count,
