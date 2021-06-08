@@ -18,7 +18,7 @@ function PeopleTable() {
   const dispatch = useAppDispatch();
 
   return (
-    <Row>
+    <Row justify="center">
       <Col className={styles.column_container}>
         {isSuccess && data && (
           <Table

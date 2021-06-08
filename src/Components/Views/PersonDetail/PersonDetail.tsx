@@ -1,5 +1,6 @@
 import { useAppSelector } from "hooks/react-redux";
 import { Col, Row, Typography } from "antd";
+import FilmCard from "Components/Shared/FilmCard";
 
 import styles from "./PersonDetail.module.scss";
 
@@ -11,7 +12,7 @@ function PersonDetail() {
   );
 
   return !!name ? (
-    <Row>
+    <Row className={styles.column_container}>
       <Col className={styles.column_container}>
         <Row>
           <Col>
@@ -50,6 +51,11 @@ function PersonDetail() {
           <Col>
             <Text strong>List of films:</Text>
           </Col>
+        </Row>
+        <Row gutter={16}>
+          {filmIDs.map((filmID) => (
+            <FilmCard key={filmID} id={filmID} />
+          ))}
         </Row>
       </Col>
     </Row>

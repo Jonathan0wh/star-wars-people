@@ -10,10 +10,10 @@ export const swApi = createApi({
     getPeople: builder.query<GetPeopleResponse, number>({
       query: (page = 1) => `people?page=${page}`,
     }),
-    getFilm: builder.query<GetFilmResponse, number>({
+    getFilm: builder.query<GetFilmResponse, string>({
       query: (id) => `films/${id}`,
     }),
   }),
 });
 
-export const { useGetPeopleQuery, useLazyGetFilmQuery } = swApi;
+export const { useGetPeopleQuery, useGetFilmQuery } = swApi;
