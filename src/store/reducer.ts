@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import peopleReducer from "Components/Views/PeopleTable";
+import { swApi } from "services/swApi";
 
 export const rootReducer = combineReducers({
-  people: peopleReducer,
+  [swApi.reducerPath]: swApi.reducer,
 });
