@@ -6,7 +6,7 @@ function FrontPage() {
   const { Content } = Layout;
 
   return (
-    <Layout>
+    <Layout style={{ minHeight: "100vh" }}>
       <Content>
         <Row justify="center" align="middle">
           <Col>
