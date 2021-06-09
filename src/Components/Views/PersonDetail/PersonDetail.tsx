@@ -1,5 +1,5 @@
 import { useAppSelector } from "hooks/react-redux";
-import { Col, Row, Typography } from "antd";
+import { Col, Row, Space, Typography } from "antd";
 import FilmCard from "Components/Shared/FilmCard";
 
 import styles from "./PersonDetail.module.scss";
@@ -52,11 +52,13 @@ function PersonDetail() {
             <Text strong>List of films:</Text>
           </Col>
         </Row>
-        <Row gutter={16}>
-          {filmIDs.map((filmID) => (
-            <FilmCard key={filmID} id={filmID} />
-          ))}
-        </Row>
+        <Space wrap>
+          <Row gutter={[16, 16]}>
+            {filmIDs.map((filmID) => (
+              <FilmCard key={filmID} id={filmID} />
+            ))}
+          </Row>
+        </Space>
       </Col>
     </Row>
   ) : null;
