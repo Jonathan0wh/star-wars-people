@@ -20,9 +20,15 @@ function PeopleTable() {
   return (
     <Row justify="center">
       <Col className={styles.column_container}>
-        <Skeleton paragraph={{ rows: 11 }} loading={isLoading} />
+        <Skeleton
+          active
+          title={{ width: 200 }}
+          paragraph={{ rows: 10, width: "100%" }}
+          loading={isLoading}
+          className={styles.skeleton}
+        />
 
-        {isSuccess && data && (
+        {!isLoading && isSuccess && data && (
           <Table
             dataSource={data.results}
             rowKey="url"

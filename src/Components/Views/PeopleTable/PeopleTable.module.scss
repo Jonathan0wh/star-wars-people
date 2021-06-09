@@ -1,3 +1,13 @@
 .column_container {
   padding: 16px;
 }
+
+.skeleton {
+  width: 90vw !important;
+}
+
+@media (min-width: 992px) {
+  .skeleton {
+    width: 900px !important;
+  }
+}
