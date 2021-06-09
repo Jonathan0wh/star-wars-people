@@ -7,6 +7,11 @@ import { updatePersonDetail } from "../PersonDetail";
 
 import styles from "./PeopleTable.module.scss";
 
+/**
+ * Star wars people table
+ *
+ * @returns Star wars people table in a Row
+ */
 function PeopleTable() {
   const { Column } = Table;
   const { Link, Title } = Typography;

@@ -7,6 +7,12 @@ interface FilmCardProps {
   id: string;
 }
 
+/**
+ * Card component in Col for displaying information for a film
+ *
+ * @param {object} props The ID of the file that needs to be displayed
+ * @returns A Card in a Col displaying information for a film
+ */
 function FilmCard({ id }: FilmCardProps) {
   const { Meta } = Card;
 

@@ -4,6 +4,11 @@ import FilmCard from "Components/Shared/FilmCard";
 
 import styles from "./PersonDetail.module.scss";
 
+/**
+ * Display a person's detail
+ *
+ * @returns A person's detail in a row, including all his film cards
+ */
 function PersonDetail() {
   const { Title, Text } = Typography;
 

@@ -3,10 +3,13 @@ import { GetFilmResponse, GetPeopleResponse } from "types/API";
 
 export const swApi = createApi({
   reducerPath: "swApi",
+
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_DOMAIN,
   }),
+
   endpoints: (builder) => ({
+    // queries and mutations
     getPeople: builder.query<GetPeopleResponse, number>({
       query: (page = 1) => `people?page=${page}`,
     }),

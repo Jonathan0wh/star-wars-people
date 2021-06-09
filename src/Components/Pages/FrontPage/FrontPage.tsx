@@ -2,6 +2,11 @@ import { Col, Divider, Layout, Row } from "antd";
 import PeopleTable from "Components/Views/PeopleTable";
 import PersonDetail from "Components/Views/PersonDetail";
 
+/**
+ * Front Page
+ *
+ * @returns Layout of the Front Page
+ */
 function FrontPage() {
   const { Content } = Layout;
 

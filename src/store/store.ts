@@ -5,8 +5,10 @@ import { swApi } from "services/swApi";
 
 export const store = configureStore({
   reducer: {
+    // API Reducers
     [swApi.reducerPath]: swApi.reducer,
 
+    // Component Reducers
     personDetail: personDetailReducer,
   },
   middleware: (getDefaultMiddleware) =>
