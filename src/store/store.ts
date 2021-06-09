@@ -11,6 +11,7 @@ export const store = configureStore({
     // Component Reducers
     personDetail: personDetailReducer,
   },
+
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(swApi.middleware),
 });
