@@ -7,12 +7,16 @@ import { updatePersonDetail } from "../PersonDetail";
 
 import styles from "./PeopleTable.module.scss";
 
+interface PeopleTableProps {
+  scrollToPersonDetail: () => void;
+}
+
 /**
  * Star wars people table
- *
+ * @param props.scrollToPersonDetail The function to scroll to person detail section
  * @returns Star wars people table in a Row
  */
-function PeopleTable() {
+function PeopleTable({ scrollToPersonDetail }: PeopleTableProps) {
   const { Column } = Table;
   const { Link, Title } = Typography;
 
@@ -41,7 +45,7 @@ function PeopleTable() {
             title={() => <Title level={4}>Star Wars People</Title>}
             bordered
             onRow={(record) => ({
-              onClick: () =>
+              onClick: () => {
                 dispatch(
                   updatePersonDetail({
                     name: record.name,
@@ -57,7 +61,9 @@ function PeopleTable() {
                       }
                     }),
                   })
-                ),
+                );
+                setTimeout(() => scrollToPersonDetail(), 250);
+              },
             })}
             onChange={(pagination) => {
               dispatch(
