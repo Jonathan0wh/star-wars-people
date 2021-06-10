@@ -36,7 +36,7 @@ function PeopleTable() {
         {!isLoading && isSuccess && data && (
           <Table
             dataSource={data.results}
-            rowKey="url"
+            rowKey="name"
             loading={isFetching}
             title={() => <Title level={4}>Star Wars People</Title>}
             bordered
