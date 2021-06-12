@@ -7,6 +7,6 @@ import App from "./App";
 // so we can import fireEvent and screen here as well
 import { render } from "./testUtils";
 
-it("Renders the app with initialState", () => {
-  render(<App />, { initialState: { user: "Redux User" }, store: store });
+it("Renders the app with store", () => {
+  render(<App />, { store });
 });
