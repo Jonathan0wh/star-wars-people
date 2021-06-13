@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page Component: Front Page should render by default 1`] = `
+<DocumentFragment>
+  <section
+    class="ant-layout"
+    style="min-height: 100vh;"
+  >
+    <main
+      class="ant-layout-content"
+    >
+      <div
+        class="ant-row ant-row-center ant-row-middle"
+      >
+        <div
+          class="ant-col"
+        >
+          <div
+            class="ant-row ant-row-center"
+          >
+            <div
+              class="ant-col column_container"
+            >
+              <div
+                class="ant-skeleton ant-skeleton-active skeleton"
+              >
+                <div
+                  class="ant-skeleton-content"
+                >
+                  <h3
+                    class="ant-skeleton-title"
+                    style="width: 200px;"
+                  />
+                  <ul
+                    class="ant-skeleton-paragraph"
+                  >
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li
+                      style="width: 100%;"
+                    />
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-divider ant-divider-horizontal"
+            role="separator"
+          />
+          <div
+            class="ant-row row_container"
+          >
+            <div
+              class="ant-col"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Page Component: Front Page should render with correct store data 1`] = `
+<DocumentFragment>
+  <section
+    class="ant-layout"
+    style="min-height: 100vh;"
+  >
+    <main
+      class="ant-layout-content"
+    >
+      <div
+        class="ant-row ant-row-center ant-row-middle"
+      >
+        <div
+          class="ant-col"
+        >
+          <div
+            class="ant-row ant-row-center"
+          >
+            <div
+              class="ant-col column_container"
+            >
+              <div
+                class="ant-skeleton ant-skeleton-active skeleton"
+              >
+                <div
+                  class="ant-skeleton-content"
+                >
+                  <h3
+                    class="ant-skeleton-title"
+                    style="width: 200px;"
+                  />
+                  <ul
+                    class="ant-skeleton-paragraph"
+                  >
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li />
+                    <li
+                      style="width: 100%;"
+                    />
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-divider ant-divider-horizontal"
+            role="separator"
+          />
+          <div
+            class="ant-row row_container"
+          >
+            <div
+              class="ant-col"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+</DocumentFragment>
+`;

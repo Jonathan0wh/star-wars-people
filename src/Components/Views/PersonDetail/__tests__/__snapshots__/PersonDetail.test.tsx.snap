@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View Component: PersonDetail should render by default 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-row row_container"
+  >
+    <div
+      class="ant-col"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`View Component: PersonDetail should render with correct store data 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-row row_container"
+  >
+    <div
+      class="ant-col"
+    />
+  </div>
+</DocumentFragment>
+`;
