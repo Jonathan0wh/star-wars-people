@@ -1,10 +1,15 @@
 import React from "react";
-import FrontPage from "Components/Pages";
+import { BrowserRouter } from "react-router-dom";
+import MainRoute from "Routes";
 
 import "./App.scss";
 
 function App() {
-  return <FrontPage />;
+  return (
+    <BrowserRouter>
+      <MainRoute />
+    </BrowserRouter>
+  );
 }
 
 export default App;

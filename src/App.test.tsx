@@ -1,4 +1,5 @@
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 import { store } from "store";
 
 import App from "./App";
@@ -8,5 +9,10 @@ import App from "./App";
 import { render } from "./testUtils";
 
 it("Renders the app with store", () => {
-  render(<App />, { store });
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>,
+    { store }
+  );
 });
