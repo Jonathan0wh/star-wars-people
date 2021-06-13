@@ -7,7 +7,7 @@ interface PersonDetailState {
   filmIDs: Array<string>;
 }
 
-const initialState: PersonDetailState = {
+export const initialState: PersonDetailState = {
   name: "",
   birthYear: "",
   gender: "",

@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shared Component: Film Card should render by default 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-col"
+    style="flex: 0 0 300px;"
+  >
+    <div
+      class="ant-card ant-card-bordered ant-card-hoverable"
+    >
+      <div
+        class="ant-card-body"
+      >
+        <div
+          class="ant-skeleton ant-skeleton-active skeleton"
+        >
+          <div
+            class="ant-skeleton-content"
+          >
+            <h3
+              class="ant-skeleton-title"
+              style="width: 38%;"
+            />
+            <ul
+              class="ant-skeleton-paragraph"
+            >
+              <li />
+              <li />
+              <li />
+              <li />
+              <li />
+              <li />
+              <li />
+              <li
+                style="width: 100%;"
+              />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Shared Component: Film Card should render with correct store data 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-col"
+    style="flex: 0 0 300px;"
+  >
+    <div
+      class="ant-card ant-card-bordered ant-card-hoverable"
+    >
+      <div
+        class="ant-card-body"
+      >
+        <div
+          class="ant-skeleton ant-skeleton-active skeleton"
+        >
+          <div
+            class="ant-skeleton-content"
+          >
+            <h3
+              class="ant-skeleton-title"
+              style="width: 38%;"
+            />
+            <ul
+              class="ant-skeleton-paragraph"
+            >
+              <li />
+              <li />
+              <li />
+              <li />
+              <li />
+              <li />
+              <li />
+              <li
+                style="width: 100%;"
+              />
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
