@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+![lint and test status](https://github.com/jonathan0wh/star-wars-people/actions/workflows/main.yml/badge.svg?branch=main)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
