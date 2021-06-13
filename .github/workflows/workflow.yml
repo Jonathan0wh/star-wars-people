@@ -24,14 +24,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Install Yarn 1
-        run: npm install --global yarn
-
       - name: Check Yarn Version
         run: yarn --version
 
-      - name: Lint
-        run: yarn lint --quiet
+      - name: GitHub Action for Yarn - Install
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
 
-      - name: Unit Test
-        run: yarn test --coverage
+      - name: GitHub Action for Yarn - Lint
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: lint --quiet
+
+      - name: GitHub Action for Yarn - Install
+        uses: Borales/actions-yarn@v2.3.0
+        with:
+          cmd: test --coverage
